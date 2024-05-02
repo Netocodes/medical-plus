@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="h-full bg-white" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Medical-Pluz</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="h-full bg-gray-200">
+    <div class="container mx-auto p-8 bg-login-bg h-screen">
+      
+      <div class="flex flex-col md:flex-row">
+
+        <div class="w-full md:w-1/2  p-8 relative"> 
+            <div
+            class="flex flex-col items-center justify-center px-2 py-2 md:px-14 md:py-8 mx-auto md:h-screen lg:py-0"
+          >
+            <a
+              href="#"
+              class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
+            >
+              <img
+                class="w-24 object-cover mr-2 bg-grey-300" 
+                src="img/Medpluz+.svg"
+                alt="logo"
+              />
+              Medical-Plus
+            </a>
+            <div
+              class="w-full  rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700"
+            >
+              <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <h1
+                  class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
+                >
+                  Create and account
+                </h1>
+                <form 
+                id="mainForm"
+                 class="space-y-4 md:space-y-6" action="#">
+            
+
+                  
+                  <div>
+                    <label
+                      for="email"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Your email</label
+                    >
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="name@company.com"
+                      autocomplete="email"
+                      required=""
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="password"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      autocomplete="password"
+                      placeholder="••••••••"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      required=""
+                    />
+                  </div>
+                  <a href="login.html">
+                    <button
+                      type="submit"
+                      id="submitBtn"
+                     
+                      class="w-[80%]  md:w-1/2 text-white mx-auto bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                    >
+                      Log in
+                    </button>
+                  </a>
+                  <p
+                    class="text-sm font-light text-gray-500 dark:text-gray-400 flex justify-end items-end"
+                  >
+                    Don't have an account?
+                    <a
+                      href="Register.html"
+                      class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                      >Register here</a
+                    >
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 p-8 rounded-br rounded-tr hidden md:flex md:justify-center md:items-center"> 
+
+            <img class="h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="img/login-side.png" alt="image description">
+
+ </div>
+    
+    </div>
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getDatabase, get, ref, child } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+
+
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyASQZtF7KU1AtL_pHZ1fOrAxA0Gjm1keD8",
+    authDomain: "medical-plus-c3739.firebaseapp.com",
+    projectId: "medical-plus-c3739",
+    storageBucket: "medical-plus-c3739.appspot.com",
+    messagingSenderId: "185653472769",
+    appId: "1:185653472769:web:8dfe722a230b9d905bda00",
+    measurementId: "G-20FYGDX8Z9"
+  };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase();
+    const auth = getAuth(app)
+    const dbref = ref(db);
+
+    let emailInput =document.getElementById('email');
+    let passInp = document.getElementById( "password");
+    let mainForm = document.getElementById("mainForm");
+    let submitBtn = document.getElementById("submitBtn")
+
+    let signInUser = evt => {
+      evt.preventDefault();
+
+      signInWithEmailAndPassword(auth, emailInput.value, passInp.value)
+      .then((credentials)  => {
+        get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot) => {
+            if(snapshot.exists){
+            sessionStorage.setItem("user-info", JSON.stringify({
+                fullname: snapshot.val().fullname,
+                pWord: snapshot.val().pWord
+            }))
+            console.log(snapshot)
+            sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
+            window.location.href = 'index.html';
+            }
+            else{
+                alert('wrong login,REAPER')
+            }
+        })
+        console.log(credentials)
+      alert("you are logged in succesfully!!")
+      })
+      .catch((error) =>{
+        alert(error.message);
+        console.log(error.code)
+        console.log(error.message)
+      })
+
+    }
+    mainForm.addEventListener('submit', signInUser);
+    submitBtn.addEventListener('click', () => {
+    
+    })
+
+    </script>
+    <!-- compiled js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+   
+  </body>
+</html>
