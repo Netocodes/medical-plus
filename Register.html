@@ -213,13 +213,13 @@
         .then(async(credentials) => {
           console.log(credentials)
           const userRef = doc(db, "userAuthList", credentials.user.uid);
-          window.location.href = 'login.html'
-
+          
           await setDoc(userRef, {
             fullname: nameField.value,
             email: emailField.value,
             mobile: mobileNo.value
           });
+          window.location.href = 'login.html'
 
         })
         .catch((error) =>{
