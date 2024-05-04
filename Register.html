@@ -174,63 +174,63 @@
  </div>
     
     </div>
-    <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
-  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
-
-
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyASQZtF7KU1AtL_pHZ1fOrAxA0Gjm1keD8",
-    authDomain: "medical-plus-c3739.firebaseapp.com",
-    projectId: "medical-plus-c3739",
-    storageBucket: "medical-plus-c3739.appspot.com",
-    messagingSenderId: "185653472769",
-    appId: "1:185653472769:web:8dfe722a230b9d905bda00",
-    measurementId: "G-20FYGDX8Z9"
-  };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase();
-    const auth = getAuth(app)
-
-    let emailInput =document.getElementById('email');
-    let passInp = document.getElementById( "password");
-    let fnameInp = document.getElementById("fullName");
-    let mainForm = document.getElementById("mainForm");
-    let mobileNo = document.getElementById("mobileNo");
-    let submitBtn = document.getElementById("submitBtn")
-
-    let RegisterUser = evt => {
-      evt.preventDefault();
-
-      createUserWithEmailAndPassword(auth, emailInput.value, passInp.value)
-      .then((credentials)  => {
-        console.log(credentials)
-       
-        set(ref(db,'UserAuthList/' + credentials.user.uid),{
-          fullname : fnameInp.value,
-          email:  emailInput.value,
-          pWord: passInp.value,
-          phone: mobileNo.value
-        })
-        alert("user account created sucessfully!!")
-        window.location.href = 'login.html'
-      })
-      .catch((error) =>{
-        alert(error.message);
-        console.log(error.code)
-        console.log(error.message)
-      })
-
-    }
-    mainForm.addEventListener('submit', RegisterUser);
-
+  
     </script>
     <!-- compiled js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-   
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+      import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+      import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCedxDuIlhqjjNwUzFJiVhVAD_JwczJtLk",
+        authDomain: "medical-plus-5bbae.firebaseapp.com",
+        projectId: "medical-plus-5bbae",
+        storageBucket: "medical-plus-5bbae.appspot.com",
+        messagingSenderId: "769254543415",
+        appId: "1:769254543415:web:e109951b70763e861d2fb2",
+        measurementId: "G-X90GEJZB7V"
+      };
+      
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const auth = getAuth(app)
+    
+
+      let nameField = document.getElementById("fullName");
+      let emailField = document.getElementById("email");
+      let mobileNo = document.getElementById("mobileNo");
+      let pWord = document.getElementById("password");
+      let registerForm = document.getElementById("mainForm")
+
+      let RegisterUser = evt =>{
+        evt.preventDefault()
+
+        createUserWithEmailAndPassword(auth, emailField.value, pWord.value)
+        .then(async(credentials) => {
+          console.log(credentials)
+          const userRef = doc(db, "userAuthList", credentials.user.uid);
+          window.location.href = 'login.html'
+
+          await setDoc(userRef, {
+            fullname: nameField.value,
+            email: emailField.value,
+            mobile: mobileNo.value
+          });
+
+        })
+        .catch((error) =>{
+          alert(error.message)
+          console.log(error.code)          
+          console.log(error.message)          
+
+        })
+      }
+      registerForm.addEventListener('submit', RegisterUser)
+    </script>
+        <script type="module" src="https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"></script>
   </body>
 </html>
