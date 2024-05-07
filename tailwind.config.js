@@ -15,10 +15,9 @@ module.exports = {
       gradientColorStops: true, // Ensure this line is present
     },
     extend: {
-      backgroundImage: {
-        'login-bg': "url('/img/login-bg.png')",
-        'footer-texture': "url('/img/footer-texture.png')",
-      },
+      backgroundImage: theme => ({
+        'herosection-bg': "url('./img/herosection-bg.jpg')",
+      }),
       colors: {
         darkGreen: '#315935',
         lightBlue: '#4BC2F1',
