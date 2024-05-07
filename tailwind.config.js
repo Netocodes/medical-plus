@@ -1,12 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./*.html'],
+  content: ['./*.html',
+  'node_modules/preline/dist/*.js',],
+  darkmode: 'media',
   theme: {
     screens : {
       sm: '480px',
       md: '768px',
       lg: '976px',
       xl: '1440px'
+    },
+    corePlugins: {
+      // Other core plugins...
+      gradientColorStops: true, // Ensure this line is present
     },
     extend: {
       backgroundImage: {
@@ -23,6 +29,7 @@ module.exports = {
   },
   plugins: [
     require ('@tailwindcss/forms'),
+    require('preline/plugin'),
   ],
 }
 
