@@ -10,14 +10,19 @@ module.exports = {
       lg: '976px',
       xl: '1440px'
     },
+    fontFamily: {
+      
+      serif: ['inter', 'serif'],
+    },
     corePlugins: {
       // Other core plugins...
       gradientColorStops: true, // Ensure this line is present
     },
+    experimental: {
+      applyComplexClasses: true, // Enable dynamic utility classes
+    },
     extend: {
-      backgroundImage: theme => ({
-        'herosection-bg': "url('./img/herosection-bg.jpg')",
-      }),
+    
       colors: {
         darkGreen: '#315935',
         lightBlue: '#4BC2F1',
