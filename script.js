@@ -39,3 +39,19 @@ themeToggleBtn.addEventListener('click', function() {
     }
     
 });
+
+
+let navbar = document.getElementById("Navbar");
+let navChild = document.getElementById("navChild")
+ 
+window.addEventListener('scroll', () => {
+    if(window.scrollY < 50){
+        navbar.classList.add('mt-5')
+        navChild.classList.add('shadow-lg')
+        navChild.classList.add('text-current ')
+    }
+    else{
+        navbar.classList.remove('mt-5')
+        navChild.classList.remove('shadow-lg')
+    }
+})
