@@ -22,7 +22,10 @@ module.exports = {
       applyComplexClasses: true, // Enable dynamic utility classes
     },
     extend: {
-    
+    backgroundImage: {
+      'Parallax': 'url("../img/herosection-bg.jpg")',
+    },
+
       colors: {
         darkGreen: '#315935',
         lightBlue: '#4BC2F1',
