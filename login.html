@@ -33,6 +33,7 @@
         </h2>
 
               <form id="mainForm" class="mt-8 space-y-6" action="#">
+                <p class="py-1"></p>
                   <div>
                       <label for="email" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
                       <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" placeholder="name@company.com" required>
@@ -104,6 +105,7 @@
       let pWord = document.getElementById("hs-toggle-password");
       let registerForm = document.getElementById("mainForm")
       let resetPass = document.getElementById("forgotpass")
+      let passHunt = document.getElementById("passErr")
 
       let signInUser = evt =>{
         evt.preventDefault()
@@ -124,10 +126,9 @@
           }
         })
         .catch((error) =>{
-          alert("check your email/password and try again ode!!")
           console.log(error.code)          
           console.log(error.message)          
-
+          alert(error.message)
         })
       }
       let forgotPassword = () =>{

@@ -1,43 +1,46 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./*.html',
-  'node_modules/preline/dist/*.js',],
-  darkmode: 'media',
+  safelist: [
+    '!duration-[0ms]',
+    '!delay-[0ms]',
+    'html.js :where([class*="taos:"]:not(.taos-init))'
+  ],
+  content: {
+    relative: true,
+    transform: (content) => content.replace(/taos:/g, ''),
+    files: ['./*.html', 'node_modules/preline/dist/*.js', './src/*.{html,js}'],
+  },
+  darkMode: 'media', // Corrected darkMode property
   theme: {
-    screens : {
+    screens: {
       sm: '480px',
       md: '768px',
       lg: '976px',
-      xl: '1440px'
+      xl: '1440px',
     },
     fontFamily: {
-      
-      serif: ['inter', 'serif'],
+      serif: ['"Inter"', 'serif'], // Corrected font family syntax
     },
     corePlugins: {
-      // Other core plugins...
       gradientColorStops: true, // Ensure this line is present
     },
     experimental: {
       applyComplexClasses: true, // Enable dynamic utility classes
     },
     extend: {
-    backgroundImage: {
-      'Parallax': 'url("../img/herosection-bg.jpg")',
-    },
-
+      backgroundImage: {
+        'parallax': 'url("../img/herosection-bg.jpg")',
+      },
       colors: {
         darkGreen: '#315935',
         lightBlue: '#4BC2F1',
-        myYellow: '#FFD134'
-
-    },
+        myYellow: '#FFD134',
+      },
     },
   },
   plugins: [
-    require ('@tailwindcss/forms'),
+    require('@tailwindcss/forms'),
     require('preline/plugin'),
+    require('taos/plugin'),
   ],
-}
-
-
+};
