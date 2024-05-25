@@ -43,7 +43,7 @@
                       'infinite-scroll': 'infinite-scroll 25s linear infinite',
                   },
                   keyframes: {
-                      'infinite-scroll': {
+                      'infinite-scroll': { 
                           from: { transform: 'translateX(0)' },
                           to: { transform: 'translateX(-100%)' },
                       }
@@ -114,6 +114,8 @@
     <!-- cookies -->
     <!-- //////////////////////////////////////////////// -->
 
+   
+
 <!-- //////////////////////////////////////////////////// -->
 <!-- Nav -->
     <nav id="Navbar" class="fixed top-0  w-full z-50 left-1/2 transform -translate-x-1/2 ">
@@ -148,11 +150,11 @@
               </li >
               
             
-                <button id="theme-toggle" type="button" class="flex justify-between text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-                  <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                  <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                  Enable Dark/Light Mode
-                </button>           
+              <button id="theme-toggle" type="button" class="flex justify-between text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                Enable Dark/Light Mode
+              </button>           
             </ul>
           </div>
           <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
@@ -232,7 +234,7 @@
   <div class="grid md:grid-cols-2  md:p-0 gap-4 md:gap-8 xl:gap-20 md:items-center">
     <div>
       <h1 class="block text-2xl font-bold text-gray-200 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white">Welcome to <span class="text-gray-200 dark:text-blue-600  font-serif italic text-md drop-shadow-md">Medical Plus</span></h1>
-      <p class="mt-3 text-lg text-gray-200 dark:text-gray-200">Hand-picked professionals and expertly crafted components, designed for any kind of entrepreneur.</p>
+      <p class="mt-3 p-4 text-center md:text-left text-lg bg-slate-300 dark:bg-gray-800 text-gray-900 dark:text-gray-400">Medical Plus connects you with hospitals and clinics for fast, reliable appointments from home. Our income comes from hospital fees, while users only pay the hospitals' booking fees.</p>
 
 
       <!-- Review -->
@@ -259,7 +261,7 @@
           </div>
 
           <p class="mt-3 text-sm text-gray-200 dark:text-gray-200">
-            <span class="font-bold">5</span> /5 - from 12k reviews
+            <span class="font-bold">4.9</span> /5 - from 5k reviews
           </p>
 
           <div class="mt-5">
@@ -505,11 +507,11 @@
                   Our Services?
               </h2>
               <p class="font-heading mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-800 dark:text-blue-200 sm:text-4xl">
-                  We know tech, we know finance. We are fintech experts.
+                We are tech, we know medical. We are medtech.
               </p>
-              <p class="mt-4 max-w-2xl text-lg text-gray-500 dark:text-gray-300 lg:mx-auto">
-                  We know how to handle taxation for all the
-                  countried we operate in. We care for our customers and help them manage cashflows.
+              <p class="mt-4 max-w-2xl  text-lg text-gray-500 dark:text-gray-300 lg:mx-auto">
+           
+We understand the hassle of making medical appointments. That’s why at Medical Plus, we’ve developed a smart solution to help you. Simply visit our website to book an appointment with any of our partner hospitals, seamlessly facilitated by our IT developers.
               </p>
           </div>
 
@@ -524,9 +526,7 @@
                           <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-blue-100">Active 24/7</p>
                       </dt>
                       <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300">
-                          Lorem ipsum, dolor sit amet consectetur
-                          adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                          blanditiis ratione.
+                        Our team is always available to assist you with any problems. Book appointments anytime, hassle-free.
                       </dd>
                   </div>
                   <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible relative shadow-md outline-1 hover:shadow-lg hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg" data-taos-offset="400"  data-taos-reset>
@@ -538,9 +538,8 @@
                           <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-blue-100">Personalized Care
                           </p>
                       </dt>
-                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300"> Lorem ipsum, dolor sit amet consectetur
-                          adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                          blanditiis ratione.
+                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300">
+                        We provide equal attention to every patient, reaching out as frequently as possible to ensure consistent care.
                       </dd>
                   </div>
                   <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible relative shadow-md outline-1 hover:shadow-lg hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg" data-taos-offset="400"  data-taos-reset>
@@ -553,9 +552,7 @@
                           <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-blue-100">Specialist Referrals
                           </p>
                       </dt>
-                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300"> Lorem ipsum, dolor sit amet consectetur
-                          adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                          blanditiis ratione.
+                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300">For those needing specialist referrals, we've got you covered. We ensure you get the expert care you need.
                       </dd>
                   </div>
                   <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible relative shadow-md outline-1 hover:shadow-lg hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg" data-taos-offset="400"  data-taos-reset>
@@ -568,9 +565,7 @@
                           <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-blue-100">Telehealth
                           </p>
                       </dt>
-                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300"> Lorem ipsum, dolor sit amet consectetur
-                          adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                          blanditiis ratione.
+                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300">You can also ask our customer care team for medical advice online, ensuring you get the help you need.
                       </dd>
                   </div>
                   <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible relative shadow-md outline-1 hover:shadow-lg hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg" data-taos-offset="400"  data-taos-reset>
@@ -583,9 +578,7 @@
                           <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-blue-100">Medication Management
                           </p>
                       </dt>
-                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300"> Lorem ipsum, dolor sit amet consectetur
-                          adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                          blanditiis ratione.
+                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300">We remind you to take your prescribed medication on time through calls or emails, whichever you prefer.
                       </dd>
                   </div>
                   <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible relative shadow-md outline-1 hover:shadow-lg hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg" data-taos-offset="400"  data-taos-reset>
@@ -598,9 +591,7 @@
                           <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-blue-100">Coordination of Care
                           </p>
                       </dt>
-                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300"> Lorem ipsum, dolor sit amet consectetur
-                          adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                          blanditiis ratione.
+                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300"> We collaborate with numerous hospitals to ensure comprehensive and seamless care for our patients.
                       </dd>
                   </div>
                   <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible relative shadow-md outline-1 hover:shadow-lg hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg" data-taos-offset="400"  data-taos-reset>
@@ -613,10 +604,7 @@
                           <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-blue-100">Mental Health Support
                           </p>
                       </dt>
-                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300"> Lorem ipsum, dolor sit amet consectetur
-                          adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                          blanditiis ratione.
-                      </dd>
+                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300">Let us know what’s bothering you. We work for the people, with professional therapists available as customer care.
                   </div>
                   <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible relative shadow-md outline-1 hover:shadow-lg hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg" data-taos-offset="400"  data-taos-reset>
                       <dt>
@@ -628,9 +616,7 @@
                           <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-blue-100">Home Visits
                           </p>
                       </dt>
-                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300"> Lorem ipsum, dolor sit amet consectetur
-                          adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                          blanditiis ratione.
+                      <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300"> We collaborate with 911 ambulance services and conduct random checkups on our customers to ensure their well-being.
                       </dd>
                   </div>
               </dl>
@@ -660,17 +646,18 @@
     <!-- Title -->
     <div class="max-w-3xl text-center mx-auto">
       <h1 class="block font-medium text-gray-200 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-        Now it's easier/smarter to book appointments online
+       
+Booking appointments online is now easier and smarter.
       </h1>
     </div>
     <!-- End Title -->
 
-    <div class="max-w-3xl text-center mx-auto">
+    <div class="max-w-3xl text-center mx-auto mt-5">
       <p class="text-lg text-gray-300">No need for the stress to the hospital to book appointments when you have Medical plus</p>
     </div>
 
     <!-- Buttons -->
-    <div class="text-center">
+    <div class="text-center mt-5">
       <a class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-6 dark:focus:ring-offset-gray-800" href="#">
         Book Appointments
         <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
@@ -699,22 +686,17 @@
         class="font-heading mb-4 bg-orange-100 text-orange-800 px-4 py-2 rounded-lg md:w-64 md:mx-auto text-xs font-semibold tracking-widest uppercase title-font">
       About us?
     </h2>
-    <p class="font-heading mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-800 dark:text-blue-200 sm:text-4xl">
-        We know tech, we know finance. We are fintech experts.
-    </p>
-    <p class="mt-4 max-w-2xl text-lg text-gray-500 dark:text-gray-300 lg:mx-auto">
-        We know how to handle taxation for all the
-        countried we operate in. We care for our customers and help them manage cashflows.
-    </p>
+   
 </div>
   <!-- Grid -->
-  <div class=" grid md:grid-cols-2 gap-12 mt-20">
+  <div class=" grid md:grid-cols-2 gap-12 mt-12">
     <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-0 lg:w-3/4">
       <h2 class="text-3xl text-gray-800 font-bold lg:text-4xl dark:text-blue-200">
-        Collaborative tools to design better user experience
+        Connecting you to healthcare effortlessly and reliably.
       </h2>
       <p class="mt-3 text-gray-800 dark:text-gray-200">
-        We help businesses bring ideas to life in the digital world, by designing and implementing the technology tools that they need to win.
+        
+Medical Plus lets you book appointments online with partnered hospitals, offering seamless, 24/7 access to healthcare services from the comfort of home.
       </p>
       <p class="mt-5">
         <a class="inline-flex items-center gap-x-1 font-medium text-blue-600 dark:text-blue-500" href="#">
@@ -737,7 +719,7 @@
             Industry-leading documentation
           </h3>
           <p class="mt-1 text-gray-600 dark:text-gray-500">
-            Our documentation and extensive Client libraries contain everything a business needs to build a custom integration in a fraction of the time.
+            Our comprehensive, accurate, and user-friendly documentation ensures you have all the information needed for efficient healthcare management.
           </p>
         </div>
       </div>
@@ -751,10 +733,10 @@
         </span>
         <div class="ms-5 sm:ms-8">
           <h3 class="text-base sm:text-lg font-semibold text-gray-800 dark:text-blue-200">
-            Developer community support
+            Community support
           </h3>
           <p class="mt-1 text-gray-600 dark:text-gray-500">
-            We actively contribute to open-source projects—giving back to the community through development, patches, and sponsorships.
+            We offer community services such as free immunizations and tests, ensuring everyone has access to essential healthcare.
           </p>
         </div>
       </div>
@@ -771,7 +753,7 @@
             Simple and affordable
           </h3>
           <p class="mt-1 text-gray-600 dark:text-gray-500">
-            From boarding passes to movie tickets, there's pretty much nothing you can't store with Preline.
+            Our website is free to use for everyone. Enjoy 70% off hospital bookings, making healthcare accessible and affordable.
           </p>
         </div>
       </div>
@@ -794,7 +776,7 @@
         Our Customers Reviews?
     </h2>
     <p class="font-heading mt-2 text-3xl px-6 leading-8 font-semibold tracking-tight text-gray-800 dark:text-blue-200 sm:text-4xl">
-        We know tech, we know finance. 
+      We are tech, we know medical. We are medtech.
     </p>
    
 </div>
@@ -806,10 +788,10 @@
       <!-- Title -->
       <div class="mb-8">
         <h2 class="mb-2 text-3xl text-gray-800 font-bold lg:text-4xl dark:text-blue-200">
-          It's all about speed
+          It's all about Reliability
         </h2>
         <p class="text-gray-600 dark:text-gray-200">
-          We provide you with a test account that can be set up in seconds. Our main focus is getting responses to you as soon as we can.
+          We provide you with a primary account that can be set up in seconds. Our main focus is getting responses to you as soon as we can.
         </p>
       </div>
       <!-- End Title -->
@@ -825,7 +807,7 @@
         
                 <div class="relative z-10 p-2 text-center">
                   <p class="text-xl italic text-gray-800 dark:text-white">
-                    Amazing people to work with. Very fast and professional partner.
+                I got your recomendetion from a friend and i must say i'm grateful to ever know a company like Medical plus still exists
                   </p>
                 </div>
         
@@ -835,7 +817,7 @@
                       <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
                     </div>
                     <div class="grow ms-4">
-                      <div class="font-semibold text-gray-800 dark:text-blue-200">Josh Grazioso</div>
+                      <div class="font-semibold text-gray-800 dark:text-blue-200">Kojo Smith</div>
                       <div class="text-xs text-gray-500 dark:text-gray-500">Director Payments & Risk | Airbnb</div>
                     </div>
                   </div>
@@ -849,7 +831,7 @@
         
                 <div class="relative z-10 p-2 text-center">
                   <p class="text-xl italic text-gray-800 dark:text-white">
-                    Amazing people to work with. Very fast and professional partner.
+                    The attention and care I and my Family gets from this company give's me hope in humanity, Thank you for all you Do MedPlus
                   </p>
                 </div>
         
@@ -859,7 +841,7 @@
                       <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
                     </div>
                     <div class="grow ms-4">
-                      <div class="font-semibold text-gray-800 dark:text-blue-200">Josh Grazioso</div>
+                      <div class="font-semibold text-gray-800 dark:text-blue-200">Maya Shiloh</div>
                       <div class="text-xs text-gray-500 dark:text-gray-500">Director Payments & Risk | Airbnb</div>
                     </div>
                   </div>
@@ -897,7 +879,7 @@
         
                 <div class="relative z-10 p-2 text-center">
                   <p class="text-xl italic text-gray-800 dark:text-white">
-                    Amazing people to work with. Very fast and professional partner.
+                   this is nice
                   </p>
                 </div>
         
@@ -907,7 +889,7 @@
                       <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
                     </div>
                     <div class="grow ms-4">
-                      <div class="font-semibold text-gray-800 dark:text-blue-200">Josh Grazioso</div>
+                      <div class="font-semibold text-gray-800 dark:text-blue-200">Josh MmaduEke</div>
                       <div class="text-xs text-gray-500 dark:text-gray-500">Director Payments & Risk | Airbnb</div>
                     </div>
                   </div>
@@ -921,7 +903,7 @@
 
         <div class="relative z-10 p-2 text-center">
           <p class="text-xl italic text-gray-800 dark:text-white">
-            Amazing people to work with. Very fast and professional partner.
+            Buy me okpa 
           </p>
         </div>
 
@@ -931,7 +913,7 @@
               <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
             </div>
             <div class="grow ms-4">
-              <div class="font-semibold text-gray-800 dark:text-blue-200">Josh Grazioso</div>
+              <div class="font-semibold text-gray-800 dark:text-blue-200">UG Stones</div>
               <div class="text-xs text-gray-500 dark:text-gray-500">Director Payments & Risk | Airbnb</div>
             </div>
           </div>
@@ -976,7 +958,7 @@
         <ul class="grid grid-cols-2 divide-y divide-y-2 divide-x divide-x-2 divide-gray-200 overflow-hidden dark:divide-gray-700">
           <li class="flex flex-col -m-0.5 p-4 sm:p-8">
             <div class="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold text-gray-800 mb-2 dark:text-blue-200">
-              45k+
+              2.5k+
             </div>
             <p class="text-sm sm:text-base text-gray-600 dark:text-gray-200">
               users - from new startups to public companies
@@ -1008,7 +990,7 @@
               2x
             </div>
             <p class="text-sm sm:text-base text-gray-600 dark:text-gray-200">
-              faster than previous Preline versions
+              faster than previous medical plus versions
             </p>
           </li>
         </ul>
@@ -1021,6 +1003,15 @@
 </div>
 <!-- End Testimonials with Stats -->
 </div>
+</div>
+<div class="flex justify-center items-center pb-6">
+ 
+  <a href="./second-index.html" class="flex items-center justify-center px-4 h-10 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+    Next Page...
+    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+    </svg>
+  </a>
 </div>
 
            <!-- compiled js -->
@@ -1055,7 +1046,7 @@
 
       let checkCred = () => {
         if(!localStorage.getItem("user-creds"))
-        window.location.href = 'login.html'
+        window.location.href = 'blank.html'
 
       else{
      nameSec.innerText = userInfo.fullname;
