@@ -56,3 +56,12 @@ window.addEventListener('scroll', () => {
         navChild.classList.remove('shadow-lg')
     }
 })
+
+
+let close = document.getElementById("hidecookie");
+let cookie = document.getElementById("cookies-simple-with-icon-and-dismiss-button");
+
+close = document.addEventListener('click', () => {
+cookie.classList.add('hidden')
+console.log("this closes well")
+});
