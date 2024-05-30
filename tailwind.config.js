@@ -31,6 +31,12 @@ module.exports = {
       backgroundImage: {
         'parallax': 'url("../img/herosection-bg.jpg")',
       },
+      textShadow: {
+        'default': '0 2px 4px rgba(0, 0, 0, 0.10)',
+        'md': '0 3px 6px rgba(0, 0, 0, 0.15)',
+        'lg': '0 5px 10px rgba(0, 0, 0, 0.20)',
+        'xl': '0 10px 20px rgba(0, 0, 0, 0.25)',
+      },
       colors: {
         darkGreen: '#315935',
         lightBlue: '#4BC2F1',
@@ -42,5 +48,25 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('preline/plugin'),
     require('taos/plugin'),
+    
+    function ({ addUtilities }) {
+      addUtilities({
+        '.text-shadow': {
+          'text-shadow': '0 2px 4px rgba(0, 0, 0, 0.10)',
+        },
+        '.text-shadow-md': {
+          'text-shadow': '0 3px 6px rgba(0, 0, 0, 0.15)',
+        },
+        '.text-shadow-lg': {
+          'text-shadow': '0 5px 10px rgba(0, 0, 0, 0.20)',
+        },
+        '.text-shadow-xl': {
+          'text-shadow': '0 10px 20px rgba(0, 0, 0, 0.25)',
+        },
+        '.text-shadow-none': {
+          'text-shadow': 'none',
+        },
+      }, ['responsive', 'hover']);
+    },
   ],
 };

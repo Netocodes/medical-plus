@@ -1,0 +1,677 @@
+
+      <!DOCTYPE html>
+      <html lang="en" class="scroll-pt-12 !scroll-smooth">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link rel="stylesheet" href="css/main.css" />
+          <title>Medical-Pluz</title>
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+            rel="stylesheet"
+          />
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+            rel="stylesheet"
+          />
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+            rel="stylesheet"
+          />
+          <script src="https://cdn.tailwindcss.com"></script>
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Protest+Revolution&display=swap" rel="stylesheet">
+          <script>
+            // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+        </script>
+          <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            inter: ['Inter', 'sans-serif'],
+                        },
+                        animation: {
+                            'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                        },
+                        keyframes: {
+                            'infinite-scroll': { 
+                                from: { transform: 'translateX(0)' },
+                                to: { transform: 'translateX(-100%)' },
+                            }
+                        }                    
+                    },
+                },
+            };
+        </script>
+         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <script>document.documentElement.classList.add('js')</script>
+        </head>
+       
+        <body class=" w-full h-screen bg-gray-200 dark:bg-gray-800 font-serif !scroll-smooth">
+
+
+            <!-- ////////////////////////////////////////////////////////////////////////// -->
+            <!-- navbar -->
+            <nav class="bg-white border-gray-200 dark:bg-gray-900">
+                <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+                        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                            <img src="img/Medical-plus-logo.png" class="h-10" alt="Flowbite Logo" />
+                            <span class="self-center 
+                            text-2xl text-gray-700  font-serif font-bold italic whitespace-nowrap dark:text-white">Medical plus</span>
+                        </a>
+                    <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                        <a href="tel:+2349134730499" class="text-sm  text-gray-500 dark:text-white hover:underline">(234) 9134730499</a>
+                    </div>
+                </div>
+            </nav>
+            <nav id="stickyNav" class="bg-gray-50 dark:bg-gray-700 w-full !z-[80]">
+                <div class="max-w-screen-xl px-4 py-3 mx-auto">
+                    <div class="flex items-center">
+                        <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+                            <li>
+                                <a href="#home" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="#company" class="text-gray-900 dark:text-white hover:underline">Company</a>
+                            </li>
+                            <li>
+                                <a href="#team" class="text-gray-900 dark:text-white hover:underline">Team</a>
+                            </li>
+                            <li>
+                                <a href="#owner" class="text-gray-900 dark:text-white hover:underline">Owner</a>
+                            </li>
+                        </ul>
+                        <div class="flex absolute right-6 md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                            <button type="button" class="flex text-sm rounded-full md:me-0 " id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                              <span class="sr-only">Open user menu</span>
+                              <svg class="w-4 h-6 rounded-md text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div class="z-50 hidden my-4 p-6 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+                              <div class="px-4 py-3">
+                                <span id="name-rep" class="block  text-sm text-gray-900 dark:text-white"></span>
+                                <span id="email-rep" class="block text-sm  text-gray-500 truncate dark:text-gray-400"></span>
+                              </div>
+                              <ul class="py-2" aria-labelledby="user-menu-button">
+                                <li>
+                                  <a href="./error.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                                </li>
+                                <li>
+                                  <a href="./error.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+                                </li>
+                               
+                                <li>
+                                  <a href="#" id="signOut" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" data-hs-overlay="#hs-sign-out-alert">Sign out</a>
+                                
+                                </li >
+                                
+                              
+                                <button id="theme-toggle" type="button" class="flex justify-between text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                                  <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                  <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                  Enable Dark/Light Mode
+                                </button>           
+                              </ul>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </nav>
+             <!-- navbar -->
+            <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+<!-- Slider -->
+<div id="home" class="duration-[300ms] taos:[transform:perspective(2500px)_rotateY(100deg)] taos:invisible taos:[backface-visibility:hidden] px-4 lg:px-6 lg:px-8 py-10">
+    <div data-hs-carousel='{
+        "loadingClasses": "opacity-0"
+      }' class="relative">
+      <div class="hs-carousel relative overflow-hidden w-full h-[30rem] md:h-[calc(100vh-106px)]  bg-gray-100 rounded-2xl dark:bg-neutral-800">
+        <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+          <!-- Item -->
+          <div class="hs-carousel-slide">
+            <div class="h-[30rem] md:h-[calc(100vh-106px)]  flex flex-col bg-[url('https://img.freepik.com/free-photo/group-african-medical-students-posed-outdoor-against-university-door_627829-392.jpg?t=st=1716931819~exp=1716935419~hmac=02d0a4d3dec6c2641044c90e1eebebad302db4ce6199140433e7819b9070b545&w=900')] bg-cover bg-center bg-no-repeat">
+              <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                <span class="block text-white">Medical Plus:</span>
+                <span class="block text-white text-xl md:text-3xl">Our Doctors are tested & trusted</span>
+                <div class="mt-5">
+                  <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="./error.html">
+                    Read Case Studies
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Item -->
+  
+          <!-- Item -->
+          <div class="hs-carousel-slide">
+            <div class="h-[30rem] md:h-[calc(100vh-106px)]  flex flex-col bg-[url('https://img.freepik.com/free-photo/africa-humanitarian-aid-doctors-together_23-2149117863.jpg?t=st=1716931874~exp=1716935474~hmac=d917f040877ed8a7066b308671aec16b097851d32536cf470dc22222e9cfd6c6&w=900')] bg-cover bg-center bg-no-repeat">
+              <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                <span class="block text-white">Medical Plus</span>
+                <span class="block text-white text-xl md:text-3xl">Our Doctors are tested & trusted</span>
+                <div class="mt-5">
+                  <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="./error.html">
+                    Read Case Studies
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Item -->
+  
+          <!-- Item -->
+          <div class="hs-carousel-slide">
+            <div class="h-[30rem] md:h-[calc(100vh-106px)]  flex flex-col bg-[url('https://img.freepik.com/free-photo/group-african-medical-students-posed-outdoor-against-university-door_627829-415.jpg?t=st=1716931946~exp=1716935546~hmac=0d8b09418da131d87e79ed03d1378fb2eaa7f628072b1e2fd230fc094ec70d10&w=900')] bg-cover bg-center bg-no-repeat">
+              <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                <span class="block text-white">Medical Plus:</span>
+                <span class="block text-white text-xl md:text-3xl">Our Doctors are tested & trusted</span>
+                <div class="mt-5">
+                  <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="./error.html">
+                    Read Case Studies
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Item -->
+
+          
+          <!-- Item -->
+          <div class="hs-carousel-slide">
+            <div class="h-[30rem] md:h-[calc(100vh-106px)]  flex flex-col bg-[url('https://img.freepik.com/premium-photo/portrait-happy-female-african-american-young-doctor-pediatrician-blue-uniform-coat-stethoscope-against-window-hospital-healthcare-medical-medicine-specialist-concept_151355-12653.jpg?w=900')] bg-cover bg-center bg-no-repeat">
+              <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                <span class="block text-white">Medical Plus</span>
+                <span class="block text-white text-xl md:text-3xl">Our Doctors are tested & trusted</span>
+                <div class="mt-5">
+                  <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="./error.html">
+                    Read Case Studies
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Item -->
+
+          <!-- Item -->
+          <div class="hs-carousel-slide">
+            <div class="h-[30rem] md:h-[calc(100vh-106px)]  flex flex-col bg-[url('https://img.freepik.com/premium-photo/two-african-american-pharmacist-working-drugstore-hospital-pharmacy-african-healthcare_627829-3264.jpg?w=900')] bg-cover bg-center bg-no-repeat">
+              <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                <span class="block text-white">Medical Plus:</span>
+                <span class="block text-white text-xl md:text-3xl">Our Doctors are tested & trusted</span>
+                <div class="mt-5">
+                  <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="./error.html">
+                    Read Case Studies
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Item -->
+
+        </div>
+      </div>
+  
+      <!-- Arrows -->
+      <button type="button" class="hs-carousel-prev hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-s-2xl focus:outline-none focus:bg-white/20">
+        <span class="text-2xl" aria-hidden="true">
+          <svg class="flex-shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+          </svg>
+        </span>
+        <span class="sr-only">Previous</span>
+      </button>
+  
+      <button type="button" class="hs-carousel-next hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-e-2xl focus:outline-none focus:bg-white/20">
+        <span class="sr-only">Next</span>
+        <span class="text-2xl" aria-hidden="true">
+          <svg class="flex-shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+          </svg>
+        </span>
+      </button>
+      <!-- End Arrows -->
+    </div>
+  </div>
+  <!-- End Slider -->
+      <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+      <!-- ////////////////////////////////////////////////////////////////////////// -->
+       <!-- company section -->
+       <div id="company">
+      <div class="lg:text-center p-12">
+        <h2
+            class="font-heading mb-4 bg-orange-100 text-orange-800 px-4 py-2 rounded-lg md:w-64 md:mx-auto text-xs font-semibold tracking-widest uppercase title-font">
+            Our Company
+        </h2>
+    </div>
+<!-- Card Blog -->
+<div class="max-w-[85rem] h-auto px-4 py-4 -z-40 sm:px-6 lg:px-8 lg:py-14 mx-auto overflow-hidden">
+    <!-- Title -->
+    <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+      <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Medical plus</h2>
+      <p class="mt-1 text-gray-600 dark:text-neutral-400">Your number medical concierge company.</p>
+    </div>
+    <!-- End Title -->
+  
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card -->
+      <a class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible group" href="#">
+        <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
+          <img class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl" src="https://img.freepik.com/free-photo/african-american-doctor-man-using-smartphone-corridor-hospital_1303-21236.jpg?t=st=1717061193~exp=1717064793~hmac=46abdaf38d9757852bd9fb48a5f90f8d95a8f3d3bddb93ab62d145eb73ba0fe2&w=900" alt="Image Description">
+          <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-neutral-900">
+            Sponsored
+          </span>
+        </div>
+  
+        <div class="mt-7">
+          <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
+            We are always Active!!.
+          </h3>
+          <p class="mt-3 text-gray-800 dark:text-neutral-200">
+            Produce professional, reliable streams easily leveraging Medical plus innovative broadcast studio.
+          </p>
+        
+        </div>
+      </a>
+      <!-- End Card -->
+  
+      <!-- Card -->
+      <a class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible group" href="#">
+        <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
+          <img class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl" src="https://img.freepik.com/free-photo/office-buildings-city_107420-95731.jpg?t=st=1717061630~exp=1717065230~hmac=0556f0e04f6820fba063450c748dd87c19341ddb7624641cda90f877d9ea2ce6&w=900" alt="Image Description">
+        </div>
+  
+        <div class="mt-7">
+          <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
+            Onsite
+          </h3>
+          <p class="mt-3 text-gray-800 dark:text-neutral-200">
+            Our Main building is here in Enugu, Do well to visit us for more enquiries.
+          </p>
+        </div>
+      </a>
+      <!-- End Card -->
+  
+      <!-- Card -->
+      <a class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible group relative flex flex-col w-full min-h-60 bg-[url('https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3000&q=80')] bg-center bg-cover rounded-xl hover:shadow-lg transition" href="#">
+        <div class="flex-auto p-4 md:p-6">
+          <h3 class="text-xl text-white/90 group-hover:text-white"><span class="font-bold">Medical Plus</span> Press publishes books about economic and technological advancement.</h3>
+        </div>
+        <div class="pt-0 p-4 md:p-6">
+          <div  onclick="myErr()" class="inline-flex items-center gap-2 text-sm font-medium text-white group-hover:text-white/70">
+            Visit the site
+            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </div>
+        </div>
+      </a>
+      <!-- End Card -->
+    </div>
+    <!-- End Grid -->
+  </div>
+  <!-- End Card Blog -->
+    </div>
+       </div>
+     <!-- company section -->
+      <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+<!-- Team -->
+<div id="team" class="max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div class="lg:text-center p-12">
+        <h2
+            class="font-heading mb-4 bg-orange-100 text-orange-800 px-4 py-2 rounded-lg md:w-64 md:mx-auto text-xs font-semibold tracking-widest uppercase title-font">
+            Our Team?
+        </h2>
+    </div>
+    <!-- Title -->
+    <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+      <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Our team</h2>
+      <p class="mt-1 text-gray-600 dark:text-neutral-400">Creative people</p>
+    </div>
+    <!-- End Title -->
+  
+    <!-- Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-12">
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            David Forren
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Founder / CEO
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Amil Evara
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            UI/UX Designer
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Ebele Egbuna
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Support Consultant
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Maria Powers
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Director of sales
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Delia Pawelke
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Front-end Developer
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Tom Lowry
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            UI/UX Designer
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Louise Donadieu
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Support Consultant
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1514222709107-a180c68d72b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Jeff Fisher
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Project Manager
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1602452920335-6a132309c7c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Sophia Harrington
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Project Manager
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1515621061946-eff1c2a352bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Christina Kray
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Support Consultant
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1514846226882-28b324ef7f28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Amy Forren
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Product Designer
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Philip Williams
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Support Consultant
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1520409364224-63400afe26e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Brian Lofoten
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            UI/UX Designer
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1558507652-2d9626c4e67a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Jessica Dorsey
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Director of sales
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+  
+      <div class="text-center">
+        <img class="rounded-full size-24 mx-auto" src="https://images.unsplash.com/photo-1521151716396-b2da27b1a19f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+        <div class="mt-2 sm:mt-4">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Nick Jackson
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            UI/UX Designer
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Grid -->
+  
+    <!-- Card -->
+    <div class="mt-12 flex justify-center">
+      <div class="border border-gray-200 py-2 px-3 rounded-full dark:border-neutral-700">
+        <div class="flex items-center gap-x-3">
+          <span class="text-sm text-gray-500 dark:text-neutral-500">Want to work with us?</span>
+          <a class="inline-flex items-center gap-x-2 text-sm font-medium text-blue-600 hover:text-blue-500 dark:text-blue-500 dark:hover:text-blue-600" href="#">
+            We are hiring
+            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End Card -->
+  </div>
+  <!-- End Team -->
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+<section id="owner" class="bg-white dark:bg-gray-900">
+    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        <div class="duration-[300ms] taos:[transform:perspective(2500px)_rotateY(100deg)] taos:invisible taos:[backface-visibility:hidden] font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">My Name is Amaugo Netochukwu</h2>
+            <p class="mb-4">I'm Netocodes, born and raised in Enugu State. I earned a National Diploma in 2022. I paused my studies to learn programming and develop skills in building quality websites to meet customer needs. If you think I've done well on this project, please rate it on a scale from one to ten.</p>
+            <p>I am a strategist, designer and developer. Innovator and problem solver. i build all kinds of websites, and im always active</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mt-8">
+            <img class="duration-[300ms] taos:[transform:perspective(2500px)_rotateY(100deg)] taos:invisible taos:[backface-visibility:hidden] w-full rounded-lg" src="./img/VideoCapture_20240403-221422.jpg" alt="office content 1">
+            <img class="duration-[300ms] taos:[transform:perspective(2500px)_rotateY(100deg)] taos:invisible taos:[backface-visibility:hidden] mt-4 w-full lg:mt-10 rounded-lg" src="./img/VideoCapture_20240403-221621.jpg" alt="office content 2">
+        </div>
+    </div>
+</section>
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+
+
+
+<!-- Start Footer -->
+<!-- ========== FOOTER ========== -->
+<footer class="mt-20 w-full  max-w-[85rem] bg-gray-300 dark:bg-gray-900 shadow-md py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+    <!-- Grid -->
+    <div class="text-center">
+      <a href="#" class="flex items-center justify-center space-x-3 rtl:space-x-reverse">
+        <img src="img/Medical-plus-logo.png" class="h-10" alt="Flowbite Logo" />
+        <span class="self-center 
+        text-2xl text-gray-700  font-serif font-bold italic whitespace-nowrap dark:text-white">Medical plus</span>
+    </a>
+      <!-- End Col -->
+  
+      <div class="mt-3">
+        <p class="text-gray-500 dark:text-gray-500">We're part of the <a class="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400" href="#">Netocodes</a> Project.</p>
+        <p class="text-gray-500 dark:text-gray-500">© NetoCodes. All rights reserved.</p>
+      </div>
+  
+      <!-- Social Brands -->
+      <div class="mt-3 space-x-2">
+        <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiSo_Sv_bSGAxVhVUEAHTQDBMkQFnoECBgQAQ&url=https%3A%2F%2Fwww.google.com%2F&usg=AOvVaw1xDfJh-YduXzT4-Mrql0P3&opi=89978449">
+          <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+          </svg>
+        </a>
+        <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700" href="https://wa.me/+2348020705588?text=How can i buy you coffee?">
+          <svg xmlns="http://www.w3.org/2000/svg" width ="16" height="16" fill="currentColor" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        </a>
+        <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700" href="https://github.com/settings/profile">
+          <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+        </a>
+        <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700" href="tel:+234134730499">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+        </a>
+      </div>
+      <!-- End Social Brands -->
+    </div>
+    <!-- End Grid -->
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+  <!-- Start Footer -->
+  
+
+      <!-- compiled js -->
+      <script src="about.js"></script>
+      <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+      <script>
+       // Initialize TAOS with reset option
+       taos.init({
+         once: false,  // Ensure animations trigger every time the element is in view
+         reset: true,  // Reset the animation state when the element is out of view
+       });
+       </script>
+           <script type="module">
+            let userCreds = JSON.parse(localStorage.getItem("user-creds"));
+            let userInfo = JSON.parse(localStorage.getItem("user-info"));
+      
+      
+            let nameSec = document.getElementById("name-rep");
+            let emailSec = document.getElementById("email-rep");
+            let signout = document.getElementById("signOut");
+      
+       
+      
+            let signOut = () => {
+              localStorage.removeItem("user-creds");
+              localStorage.removeItem("user-info");
+              window.location.href = 'login.html'
+            }
+      
+            let checkCred = () => {
+              if(!localStorage.getItem("user-creds"))
+              window.location.href = 'blank.html'
+      
+            else{
+           nameSec.innerText = userInfo.fullname;
+            emailSec.innerText = userCreds.email;
+            }
+      
+            }
+      
+            window.addEventListener('load', checkCred);
+            signout.addEventListener('click', signOut)
+          </script>
+      
+      <script src="./node_modules/preline/dist/preline.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
