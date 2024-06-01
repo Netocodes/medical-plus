@@ -30,6 +30,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'parallax': 'url("../img/herosection-bg.jpg")',
+        'logo': 'url("../img/Medical-plus-logo.png")'
       },
       textShadow: {
         'default': '0 2px 4px rgba(0, 0, 0, 0.10)',
@@ -38,7 +39,7 @@ module.exports = {
         'xl': '0 10px 20px rgba(0, 0, 0, 0.25)',
       },
       colors: {
-        darkGreen: '#315935',
+        myBlue: '#4169e1',
         lightBlue: '#4BC2F1',
         myYellow: '#FFD134',
       },

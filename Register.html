@@ -19,7 +19,11 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-gray-200 dark:bg-gray-800 font-mono">
+  <body class="bg-white dark:bg-gray-800 font-sans">
+
+
+    <!-- ////////////////////////////////////////////// -->
+    <!-- Register/Signup form -->
     <div class="max-w-2xl md:bg-white mx-auto min-h-screen overflow-hidden py-14 flex flex-col justify-center items-center px-6 pt-8 sm:mt-0">
  
       <a href="#" class="text-2xl font-semibold flex justify-center items-center mb-8 lg:mb-10">
@@ -35,7 +39,7 @@
               </h2>
               <form class="mt-8 space-y-6" id="mainForm" action="#">
                   <div>
-                      <label for="fullName" class="text-sm font-medium text-gray-900 block mb-2">Your fullName</label>
+                      <label for="fullName" class="text-sm font-medium text-myBlue block mb-2">Your fullName</label>
                       <input type="fullName" name="fullName" id="fullName" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" placeholder="name@company.com" required>
                   </div>
                   <div>
@@ -48,7 +52,7 @@
                   </div>
                   <div class="relative">
                       <label for="password" class=" text-sm font-medium text-gray-900 block mb-2">Your password</label>
-                      <input type="password" name="password" id="hs-toggle-password"  placeholder="••••••••" class=" bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" required>
+                      <input type="password" name="password" id="hs-toggle-password"  placeholder="••••••••" class=" bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-red-600 focus:border-red-600 block w-full p-2.5" required>
                  <button type="button" data-hs-toggle-password='{
         "target": "#hs-toggle-password"
       }' class="absolute ml-0 top-7 end-0 p-3.5 rounded-e-md">
@@ -68,23 +72,26 @@
             
                     </div>
                 
-                  <div class="flex items-center ml-14 -mt-4">
+                  <div class="flex items-center">
                       <div class="flex items-center h-5">
                           <input id="remember" aria-describedby="remember" name="remember" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-200 h-4 w-4 rounded" required>
                       </div>
                       <div class="text-sm ml-3">
-                          <label for="remember" class="font-medium text-gray-900">I accept the <a href="#" class="text-teal-500 hover:underline">Terms and Conditions</a></label>
+                          <label for="remember" class="font-medium text-gray-900">I accept the <a href="#" class="text-blue-500 hover:underline">Terms and Conditions</a></label>
                       </div>
                   </div>
-                  <button type="submit" id="submitBtn" class="mt-6 text-white bg-blue-400 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-base px-5 py-3  w-full sm:w-1/2 relative left-32 top-50 text-center">Create account</button>
+                  <button type="submit" id="submitBtn" class="mt-6 text-white bg-blue-400 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center">Create account</button>
                   <div class=" relative right-2 mt-5 text-sm font-medium text-gray-500">
-                      Already have an account? <a href="login.html" class="text-teal-500 hover:underline">Login here</a>
+                      Already have an account? <a href="login.html" class="text-blue-500 hover:underline">Login here</a>
                   </div>
               </form>
           </div>
       </div>
   </div>
-  
+    <!-- Register/Signup form -->
+      <!-- ////////////////////////////////////////////// -->
+    
+    
     </script>
     <!-- compiled js -->
     <script src="./node_modules/preline/dist/preline.js"></script>

@@ -49,7 +49,7 @@
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>document.documentElement.classList.add('js')</script>
   </head>
-  <body class=" w-full bg-gray-200 dark:bg-gray-800 font-serif !scroll-smooth">
+  <body class=" w-full bg-fixed bg-[url('https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=900&t=st=1717266947~exp=1717267547~hmac=90f1c2d619c1c391c7e15fb12105094bf76975a432a77081fc0e88c2c914fe34')] bg-cover dark:bg-gray-800 font-serif !scroll-smooth">
 
 
 <!-- ////////'//////////////////////////////////////////' -->
@@ -123,7 +123,7 @@
 <!-- //////////////////////////////////////////////////// -->
 <!-- Nav -->
     <nav id="Navbar" class="fixed top-0  w-full z-50 left-1/2 transform -translate-x-1/2 ">
-      <div id="navChild" class="max-w-screen-xl rounded-lg bg-white shadow-lg border-gray-200 dark:bg-gray-600   flex flex-wrap items-center  justify-between mx-auto p-4">
+      <div id="navChild" class="max-w-screen-xl rounded-lg bg-white shadow-lg border-gray-200 dark:bg-gray-800   flex flex-wrap items-center  justify-between mx-auto p-4">
       <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="img/Medical-plus-logo.png" class="h-10" alt="Flowbite Logo" />
           <span class="self-center 
@@ -135,7 +135,7 @@
             <svg class="w-6 h-6 rounded-md text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg>
           </button>
           <!-- Dropdown menu -->
-          <div class="z-50 hidden my-4 p-6 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+          <div class="z-50 hidden my-4 p-6 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-600" id="user-dropdown">
             <div class="px-4 py-3">
               <span id="name-rep" class="block  text-sm text-gray-900 dark:text-white"></span>
               <span id="email-rep" class="block text-sm  text-gray-500 truncate dark:text-gray-400"></span>
@@ -169,7 +169,7 @@
         </button>
       </div>
       <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
-        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-600 md:dark:bg-gray-800 dark:border-gray-700">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-800 dark:border-gray-700">
           <li>
             <a href="#home" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
           </li>
@@ -181,7 +181,7 @@
           </li>
           
           <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Appointments</a>
+            <a href="./appointment.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Appointments</a>
           </li>
           <li>
             <a href="#review" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Reviews</a>
@@ -310,7 +310,7 @@
           Get started
           <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </a>
-        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-gray-800 dark:hover:bg-neutral-800" href="#">
+        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-gray-800 dark:hover:bg-neutral-800" href="./appointment.html">
           Book Appointments
         </a>
       </div>
@@ -420,7 +420,7 @@
 <!-- //////////////////////////////////////////////////// -->
 <!-- Service Section -->
 <section id="Service" class="Sevices w-full overflow-hidden" >
-  <div class="py-12 bg-gray-200 dark:bg-gray-700">
+  <div class="py-12 dark:bg-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div class="lg:text-center">
@@ -580,7 +580,7 @@ Booking appointments online is now easier and smarter.
 
     <!-- Buttons -->
     <div class="text-center mt-5">
-      <a class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-6 dark:focus:ring-offset-gray-800" href="#">
+      <a class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-6 dark:focus:ring-offset-gray-800" href="./appointment.html">
         Book Appointments
         <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
       </a>
@@ -599,7 +599,7 @@ Booking appointments online is now easier and smarter.
 
 <!-- //////////////////////////////////////////////////// -->
 <!-- about section -->
-<div id="about">
+<div id="about" class="dark:bg-gray-800">
 <!-- Icon Blocks -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto overflow-hidden">
 
@@ -631,7 +631,7 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
 
     <div class="delay-[300ms] duration-[600ms] taos:translate-x-[200px] taos:opacity-0 space-y-6 lg:space-y-10">
       <!-- Icon Block -->
-      <div class="flex delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0">
+      <div class="flex delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0 shadow-md outline-1 hover:shadow-lg  hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg">
         <!-- Icon -->
         <span class="flex-shrink-0 inline-flex justify-center items-center size-[46px] rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm mx-auto dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
           <svg class="flex-shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
@@ -648,7 +648,7 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
       <!-- End Icon Block -->
 
       <!-- Icon Block -->
-      <div class="flex delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0">
+      <div class="flex delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0 shadow-md outline-1 hover:shadow-lg  hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg">
         <!-- Icon -->
         <span class="flex-shrink-0 inline-flex justify-center items-center size-[46px] rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm mx-auto dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
           <svg class="flex-shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
@@ -665,7 +665,7 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
       <!-- End Icon Block -->
 
       <!-- Icon Block -->
-      <div class="flex delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0">
+      <div class="flex delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0 shadow-md outline-1 hover:shadow-lg  hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg">
         <!-- Icon -->
         <span class="flex-shrink-0 inline-flex justify-center items-center size-[46px] rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm mx-auto dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
           <svg class="flex-shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
@@ -695,8 +695,8 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
 
 <!-- /////////////////////////////////////////////////// -->
 <!-- Review page -->
-<div id="review">
-  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto overflow-hidden">
+<div id="review" class="w-full dark:bg-gray-800">
+  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto dark:bg-gray-800 overflow-hidden">
   <div class="delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0 lg:text-center" data-taos-offset="300">
     <h2
         class="font-heading mb-4 bg-orange-100 text-orange-800 px-4 py-2 rounded-lg md:w-64 md:mx-auto text-xs font-semibold tracking-widest uppercase title-font">
@@ -726,7 +726,7 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
 
       <div id="default-carousel" class="relative w-full" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden  rounded-lg md:h-52 shadow-lg bg-gray-300 dark:bg-gray-900 ">
+        <div class="relative h-56 overflow-hidden  rounded-lg md:h-52 shadow-lg bg-gray-300 dark:bg-gray-900 shadow-md outline-1 hover:shadow-lg  hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg ">
              <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out mt-5" data-carousel-item>
               <blockquote class="relative">
@@ -882,7 +882,7 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
       <div class="space-y-6 sm:space-y-8">
         <!-- List -->
         <ul class="grid grid-cols-2 divide-y divide-y-2 divide-x divide-x-2 divide-gray-200 overflow-hidden dark:divide-gray-700">
-          <li class="flex flex-col -m-0.5 p-4 sm:p-8">
+          <li class="flex flex-col -m-0.5 p-4 sm:p-8 shadow-md outline-1 hover:shadow-lg  hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg">
             <div class="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold text-gray-800 mb-2 dark:text-blue-200">
               2.5k+
             </div>
@@ -891,7 +891,7 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
             </p>
           </li>
 
-          <li class="flex flex-col -m-0.5 p-4 sm:p-8">
+          <li class="flex flex-col -m-0.5 p-4 sm:p-8 shadow-md outline-1 hover:shadow-lg  hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg">
             <div class="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold text-gray-800 mb-2 dark:text-blue-200">
               <svg class="flex-shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
               23%
@@ -901,7 +901,7 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
             </p>
           </li>
 
-          <li class="flex flex-col -m-0.5 p-4 sm:p-8">
+          <li class="flex flex-col -m-0.5 p-4 sm:p-8 shadow-md outline-1 hover:shadow-lg  hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg">
             <div class="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold text-gray-800 mb-2 dark:text-blue-200">
               <svg class="flex-shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
               9.3%
@@ -911,7 +911,7 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
             </p>
           </li>
 
-          <li class="flex flex-col -m-0.5 p-4 sm:p-8">
+          <li class="flex flex-col -m-0.5 p-4 sm:p-8 shadow-md outline-1 hover:shadow-lg  hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg">
             <div class="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold text-gray-800 mb-2 dark:text-blue-200">
               2x
             </div>
@@ -938,7 +938,7 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
 
 <!-- /////////////////////////////////////////////////// -->
 <!-- Approach -->
-<div id="approach" class="bg-gray-200 dark:bg-gray-800 overflow-hidden">
+<div id="approach" class=" dark:bg-gray-800 overflow-hidden">
   <div class="delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0 lg:text-center px-4">
     <h2
         class="font-heading mb-4 bg-orange-100 text-orange-800 px-4 py-2 text-center rounded-lg md:w-64 md:mx-auto text-xs font-semibold tracking-widest uppercase title-font">
@@ -957,13 +957,13 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
 
     <!-- Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:items-center">
-      <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible aspect-w-16 aspect-h-6 lg:aspect-none">
+      <div class="delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible aspect-w-16 aspect-h-6 lg:aspect-none ">
         <img class="w-full object-cover rounded-xl" src="https://img.freepik.com/free-photo/african-american-pediatrician-doctor-giving-high-five-young-children-medical-appointment-hospital-office-therapist-man-explaining-illness-symptoms-discussing-healthcare-treatment_482257-28844.jpg?t=st=1717063127~exp=1717066727~hmac=83a6b8abd8fa094b6f531d9f9c2929129539a149d2e23870d9394d0c8bb8c088&w=900" alt="Image Description">
       </div>
       <!-- End Col -->
 
       <!-- Timeline -->
-      <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible">
+      <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible ">
         <!-- Heading -->
         <div class="mb-6">
           <h3 class="text-gray-800 dark:text-blue-200 text-sm font-medium uppercase">
@@ -985,10 +985,10 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
           <!-- End Icon -->
 
           <!-- Right Content -->
-          <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible grow pt-0.5 pb-8 sm:pb-12">
+          <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible shadow-md outline-1 hover:shadow-lg  hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg grow pt-0.5 pb-8 sm:pb-12">
             <p class="text-sm lg:text-base text-gray-600 dark:text-gray-300">
-              <span class="text-gray-900 dark:text-blue-200 font-bold text-xl">Market Research and Analysis:</span>
-              Identify your target audience and understand their needs, preferences, and behaviors.
+              <span class="text-gray-900 dark:text-blue-200 font-bold text-xl">All-in-One Healthcare Hub:</span>
+              Medical Plus brings together everything you need for healthcare in one place.
             </p>
           </div>
           <!-- End Right Content -->
@@ -1008,10 +1008,10 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
           <!-- End Icon -->
 
           <!-- Right Content -->
-          <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible grow pt-0.5 pb-8 sm:pb-12">
+          <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible shadow-md outline-1 hover:shadow-lg  hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg grow pt-0.5 pb-8 sm:pb-12">
             <p class="text-sm lg:text-base text-gray-600 dark:text-gray-300">
-              <span class="text-gray-900 dark:text-blue-200 font-bold text-lg">Product Development and Testing:</span>
-              Develop digital products or services that address the needs and preferences of your target audience.
+              <span class="text-gray-900 dark:text-blue-200 font-bold text-lg">Easy Access, Anytime, Anywhere:</span>
+              Get healthcare services wherever you are, whenever you need them.
             </p>
           </div>
           <!-- End Right Content -->
@@ -1031,10 +1031,10 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
           <!-- End Icon -->
 
           <!-- Right Content -->
-          <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible grow pt-0.5 pb-8 sm:pb-12">
+          <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible shadow-md outline-1 hover:shadow-lg  hover:bg-blue-100 dark:hover:bg-gray-600 p-3 hover:rounded-lg grow pt-0.5 pb-8 sm:pb-12">
             <p class="text-sm md:text-base text-gray-600 dark:text-gray-300">
-              <span class="text-gray-900 dark:text-blue-200 font-bold text-lg">Marketing and Promotion:</span>
-              Develop a comprehensive marketing strategy to promote your digital products or services.
+              <span class="text-gray-900 dark:text-blue-200 font-bold text-lg">Your Health, Your Privacy: </span>
+              We keep your personal info safe while tailoring care to you.
             </p>
           </div>
           <!-- End Right Content -->
@@ -1056,8 +1056,8 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
           <!-- Right Content -->
           <div class="delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible grow pt-0.5 pb-8 sm:pb-12">
             <p class="text-sm md:text-base text-gray-600 dark:text-gray-300">
-              <span class="text-gray-900 dark:text-blue-200 font-bold text-lg">Launch and Optimization:</span>
-              Launch your digital products or services to the market, closely monitoring their performance and user feedback.
+              <span class="text-gray-900 dark:text-blue-200 font-bold text-lg">Simplified Healthcare Navigation:</span>
+              Medical Plus simplifies navigating the complex healthcare system for everyone.
             </p>
           </div>
           <!-- End Right Content -->
@@ -1271,6 +1271,21 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
               once: false,  // Ensure animations trigger every time the element is in view
               reset: true,  // Reset the animation state when the element is out of view
             });
+            let navbar = document.getElementById("Navbar");
+let navChild = document.getElementById("navChild")
+ 
+window.addEventListener('scroll', () => {
+    if(window.scrollY < 50){
+        navbar.classList.add('mt-5')
+        navChild.classList.add('shadow-lg')
+       
+    }
+    else{
+        navbar.classList.remove('mt-5')
+        navChild.classList.remove('shadow-lg')
+    }
+})
+
             </script>
            <script src="./node_modules/preline/dist/preline.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
@@ -1306,6 +1321,7 @@ Medical Plus lets you book appointments online with partnered hospitals, offerin
       window.addEventListener('load', checkCred);
       signout.addEventListener('click', signOut)
     </script>
+
 
   </body>
 </html>
