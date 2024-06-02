@@ -50,17 +50,73 @@
   <script>document.documentElement.classList.add('js')</script>
   </head>
   <body class=" w-full bg-gray-200 dark:bg-gray-800 font-serif !scroll-smooth">
+   
+      <header class="fixed top-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700">
+        <nav class="relative max-w-[85rem] w-full mx-auto px-4 py-5 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
+          <div class="flex items-center justify-between ">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="img/Medical-plus-logo.png" class="h-10" alt="Flowbite Logo" />
+                <span class="self-center 
+                text-2xl text-gray-700  font-serif font-bold italic whitespace-nowrap dark:text-white">Medical plus</span>
+            </a>
+<div class="absolute right-0">
+    
     <button id="theme-toggle" type="button" class="flex justify-between  text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
         <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
         <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
         Enable Dark/Light Mode
       </button>    
+</div>
+        </div>
+        </nav>
+      </header>
+
+<!-- Hero -->
+<div class="bg-neutral-900">
+    <div class="max-w-5xl mx-auto px-4 xl:px-0 pt-24 lg:pt-32 pb-24">
+      <h1 class="font-semibold text-white text-5xl md:text-6xl">
+        <span class="text-blue-500 ">Medical Plus</span> A smarter way to Book Medical Appointments
+      </h1>
+      <div class="max-w-4xl">
+        <p class="mt-5 text-neutral-400 text-lg">
+            "This form collects accurate details for your appointment, securely stored on our server. Please choose your preferred method of contact (call or text) from the dropdown menu next to the input field for your phone number. Our customer service team will contact you via your chosen method to discuss health-related issues, ensuring your privacy."
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End Hero -->
+  
+  <!-- Clients -->
+  <div class="relative overflow-hidden pt-4 bg-neutral-900">
+    <svg class="absolute -bottom-20 start-1/2 w-[1900px] transform -translate-x-1/2" width="2745" height="488" viewBox="0 0 2745 488" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.5 330.864C232.505 403.801 853.749 527.683 1482.69 439.719C2111.63 351.756 2585.54 434.588 2743.87 487" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 308.873C232.505 381.81 853.749 505.692 1482.69 417.728C2111.63 329.765 2585.54 412.597 2743.87 465.009" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 286.882C232.505 359.819 853.749 483.701 1482.69 395.738C2111.63 307.774 2585.54 390.606 2743.87 443.018" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 264.891C232.505 337.828 853.749 461.71 1482.69 373.747C2111.63 285.783 2585.54 368.615 2743.87 421.027" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 242.9C232.505 315.837 853.749 439.719 1482.69 351.756C2111.63 263.792 2585.54 346.624 2743.87 399.036" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 220.909C232.505 293.846 853.749 417.728 1482.69 329.765C2111.63 241.801 2585.54 324.633 2743.87 377.045" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 198.918C232.505 271.855 853.749 395.737 1482.69 307.774C2111.63 219.81 2585.54 302.642 2743.87 355.054" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 176.927C232.505 249.864 853.749 373.746 1482.69 285.783C2111.63 197.819 2585.54 280.651 2743.87 333.063" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 154.937C232.505 227.873 853.749 351.756 1482.69 263.792C2111.63 175.828 2585.54 258.661 2743.87 311.072" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 132.946C232.505 205.882 853.749 329.765 1482.69 241.801C2111.63 153.837 2585.54 236.67 2743.87 289.082" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 110.955C232.505 183.891 853.749 307.774 1482.69 219.81C2111.63 131.846 2585.54 214.679 2743.87 267.091" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 88.9639C232.505 161.901 853.749 285.783 1482.69 197.819C2111.63 109.855 2585.54 192.688 2743.87 245.1" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 66.9729C232.505 139.91 853.749 263.792 1482.69 175.828C2111.63 87.8643 2585.54 170.697 2743.87 223.109" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 44.9819C232.505 117.919 853.749 241.801 1482.69 153.837C2111.63 65.8733 2585.54 148.706 2743.87 201.118" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 22.991C232.505 95.9276 853.749 219.81 1482.69 131.846C2111.63 43.8824 2585.54 126.715 2743.87 179.127" class="stroke-neutral-700/50" stroke="currentColor"/>
+      <path d="M0.5 1C232.505 73.9367 853.749 197.819 1482.69 109.855C2111.63 21.8914 2585.54 104.724 2743.87 157.136" class="stroke-neutral-700/50" stroke="currentColor"/>
+    </svg>
+  
+    
+  </div>
+  <!-- End Clients -->
+
 <!-- Hero -->
 <div class="relative overflow-hidden">
     <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div class="max-w-xl text-center mx-auto">
-        <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl dark:text-white">Booking Appointments is now easy With <span class="text-blue-600">Medical Plus</span></h1>
-        <p class="mt-8 text-sm text-gray-500 dark:text-neutral-400">After filling the appointment form Youll be redirected to a page for making payments you can either pay when you reach the hospital or clinic  refered by our specialists or save yourself the time and pay here and go with your slip...</p>
+        <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl dark:text-white">Booking Appointments is now easy With <span class="font-bold font-seif italic text-blue-600">Medical Plus</span></h1>
+        <p class="mt-8 text-sm text-gray-500 dark:text-gray-300">After filling the appointment form Youll be redirected to a page for making payments you can either pay when you reach the hospital or clinic  refered by our specialists or save yourself the time and pay here and go with your slip...</p>
       </div>
   
       <div class="mt-10 relative max-w-5xl mx-auto">
@@ -230,13 +286,16 @@
           <!-- End Col -->
         </div>
         <!-- End Grid -->
-  
-        <div class="mt-5 flex absolute bottom-0  right-0 gap-x-2">
+        <p class="text-xs mt-3 py-6 text-gray-600 dark:text-neutral-400">
+            You can take a <a class="text-blue-500 underline" href="error.html">quick survey</a> to help the developers maintain this website
+           </p>
+         
+        <div class="mt-5 flex absolute bottom-0 py-16 right-0 gap-x-2">
           <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-gray-800 dark:hover:bg-neutral-800">
           <a href="./payment.html">Make payments</a>
           </button>
           <button type="button"class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold  rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-       <a href="./error.html">   Pay on Arrival</a>
+       <a href="./error.html">   Pay on Arrival- </a>
           </button>
         </div>
       </form>
@@ -330,3 +389,4 @@
   
 </body>
 </html>
+7
