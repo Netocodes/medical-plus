@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Medical-Pluz</title>
+    <title>Medical-Pluz-- Appointment Form</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
       rel="stylesheet"
@@ -49,285 +49,114 @@
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>document.documentElement.classList.add('js')</script>
   </head>
-  <body class=" w-full bg-gray-200 dark:bg-gray-800 font-serif !scroll-smooth">
-   
-      <header class="fixed top-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700">
-        <nav class="relative max-w-[85rem] w-full mx-auto px-4 py-5 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
-          <div class="flex items-center justify-between ">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="img/Medical-plus-logo.png" class="h-10" alt="Flowbite Logo" />
-                <span class="self-center 
-                text-2xl text-gray-700  font-serif font-bold italic whitespace-nowrap dark:text-white">Medical plus</span>
-            </a>
-<div class="absolute right-0">
+  <body class="  w-full bg-fixed bg-slate-100 dark:bg-gray-900 font-serif !scroll-smooth">
     
-    <button id="theme-toggle" type="button" class="flex justify-between  text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-        Enable Dark/Light Mode
-      </button>    
-</div>
-        </div>
-        </nav>
-      </header>
+ <!-- ///////////////////////////////////////////// -->
+    <!--go back button  -->
+    <button  type="button" class="sticky flex justify-between text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+      </svg>
+        <a href="./Register.html"> Go Back</a>
+    </button> 
+ <!-- ///////////////////////////////////////////// -->
+    <!--go back button  -->
 
-<!-- Hero -->
-<div class="bg-neutral-900">
-    <div class="max-w-5xl mx-auto px-4 xl:px-0 pt-24 lg:pt-32 pb-24">
-      <h1 class="font-semibold text-white text-5xl md:text-6xl">
-        <span class="text-blue-500 ">Medical Plus</span> A smarter way to Book Medical Appointments
-      </h1>
-      <div class="max-w-4xl">
-        <p class="mt-5 text-neutral-400 text-lg">
-            "This form collects accurate details for your appointment, securely stored on our server. Please choose your preferred method of contact (call or text) from the dropdown menu next to the input field for your phone number. Our customer service team will contact you via your chosen method to discuss health-related issues, ensuring your privacy."
-        </p>
+   
+<!-- //////////////////////////////////////////////////// -->
+<!-- Nav -->
+<header id="Navigation" class="py-1  bg-white/75 md:bg-black/5 flex flex-wrap md:justify-start md:flex-nowrap z-[80] w-full text-sm dark:bg-black/75 dark:md:bg-black/5">
+  <nav  class="relative  max-w-[85rem] w-full bg-white border border-gray-200 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto dark:bg-gray-900 dark:border-gray-700" aria-label="Global">
+    <div class="flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="img/Medical-plus-logo.png" class="h-10" alt="Flowbite Logo" />
+        <span class="self-center 
+        text-2xl text-gray-700  font-serif font-bold italic whitespace-nowrap dark:text-white">Medical plus</span>
+    </a>
+      <div class="md:hidden">
+        <button type="button" class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full border border-gray-200 text-gray-800 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+          <svg class="hs-collapse-open:hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+          <svg class="hs-collapse-open:block hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
       </div>
     </div>
-  </div>
-  <!-- End Hero -->
-  
-  <!-- Clients -->
-  <div class="relative overflow-hidden pt-4 bg-neutral-900">
-    <svg class="absolute -bottom-20 start-1/2 w-[1900px] transform -translate-x-1/2" width="2745" height="488" viewBox="0 0 2745 488" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0.5 330.864C232.505 403.801 853.749 527.683 1482.69 439.719C2111.63 351.756 2585.54 434.588 2743.87 487" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 308.873C232.505 381.81 853.749 505.692 1482.69 417.728C2111.63 329.765 2585.54 412.597 2743.87 465.009" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 286.882C232.505 359.819 853.749 483.701 1482.69 395.738C2111.63 307.774 2585.54 390.606 2743.87 443.018" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 264.891C232.505 337.828 853.749 461.71 1482.69 373.747C2111.63 285.783 2585.54 368.615 2743.87 421.027" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 242.9C232.505 315.837 853.749 439.719 1482.69 351.756C2111.63 263.792 2585.54 346.624 2743.87 399.036" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 220.909C232.505 293.846 853.749 417.728 1482.69 329.765C2111.63 241.801 2585.54 324.633 2743.87 377.045" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 198.918C232.505 271.855 853.749 395.737 1482.69 307.774C2111.63 219.81 2585.54 302.642 2743.87 355.054" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 176.927C232.505 249.864 853.749 373.746 1482.69 285.783C2111.63 197.819 2585.54 280.651 2743.87 333.063" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 154.937C232.505 227.873 853.749 351.756 1482.69 263.792C2111.63 175.828 2585.54 258.661 2743.87 311.072" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 132.946C232.505 205.882 853.749 329.765 1482.69 241.801C2111.63 153.837 2585.54 236.67 2743.87 289.082" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 110.955C232.505 183.891 853.749 307.774 1482.69 219.81C2111.63 131.846 2585.54 214.679 2743.87 267.091" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 88.9639C232.505 161.901 853.749 285.783 1482.69 197.819C2111.63 109.855 2585.54 192.688 2743.87 245.1" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 66.9729C232.505 139.91 853.749 263.792 1482.69 175.828C2111.63 87.8643 2585.54 170.697 2743.87 223.109" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 44.9819C232.505 117.919 853.749 241.801 1482.69 153.837C2111.63 65.8733 2585.54 148.706 2743.87 201.118" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 22.991C232.505 95.9276 853.749 219.81 1482.69 131.846C2111.63 43.8824 2585.54 126.715 2743.87 179.127" class="stroke-neutral-700/50" stroke="currentColor"/>
-      <path d="M0.5 1C232.505 73.9367 853.749 197.819 1482.69 109.855C2111.63 21.8914 2585.54 104.724 2743.87 157.136" class="stroke-neutral-700/50" stroke="currentColor"/>
-    </svg>
-  
-    
-  </div>
-  <!-- End Clients -->
+    <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
+        <a class="py-3 ps-px text-lg sm:px-3 font-medium text-blue-600 dark:text-blue-500" href="#home" aria-current="page">Intro</a>
+        <a class="py-3 ps-px sm:px-3 font-medium text-gray-500 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500" href="#Service">Form</a>
+ 
+        <a class="flex items-center gap-x-2 font-medium md:border-s md:border-gray-300 py-2 md:py-0 md:my-2 md:ps-6 dark:border-neutral-700 dark:text-neutral-400 dark:hover:text-blue-500" href="#">
+        
+          
+
+          <button type="button" class="flex items-center justify-center text-sm rounded-full md:me-0 dark:bg-gray-400 w-8 h-8 " id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+            <span class="sr-only">Open user menu</span>
+            <svg class="w-6 h-6 rounded-md text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg>
+          </button>
+
+          <button id="theme-toggle" type="button" class="flex justify-between text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+       <p class="sr-only">Dark mode toggler</p>
+          </button>    
+          <!-- Dropdown menu -->
+          <div class="z-50 hidden my-4 p-6 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-600" id="user-dropdown">
+            <div class="px-4 py-3 ">
+              <span id="name-rep" class="block  text-sm text-gray-900 dark:text-white"></span>
+              <span id="email-rep" class="block text-sm  text-gray-500 truncate dark:text-gray-400"></span>
+            </div>
+            <ul class="" aria-labelledby="user-menu-button">
+              <li>
+                <a href="./error.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+              </li>
+              <li>
+                <a href="#" id="admin" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+              </li>
+             
+              <li>
+                <a href="#" id="signOut" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" data-hs-overlay="#hs-sign-out-alert">Sign out</a>
+              
+              </li >
+          </ul>
+          </div>
+              
+        </a>
+        
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- End Nav -->
+<!-- //////////////////////////////////////////////////// -->
+ 
+
 
 <!-- Hero -->
 <div class="relative overflow-hidden">
-    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <div class="max-w-xl text-center mx-auto">
-        <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl dark:text-white">Booking Appointments is now easy With <span class="font-bold font-seif italic text-blue-600">Medical Plus</span></h1>
-        <p class="mt-8 text-sm text-gray-500 dark:text-gray-300">After filling the appointment form Youll be redirected to a page for making payments you can either pay when you reach the hospital or clinic  refered by our specialists or save yourself the time and pay here and go with your slip...</p>
-      </div>
-  
-      <div class="mt-10 relative max-w-5xl mx-auto">
-        <div class="w-full object-cover h-auto sm:h-[auto] rounded-xl">
-            <!-- Card Section -->
-<div class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 mx-auto"><!-- Card -->
-    <div class="bg-white rounded-xl shadow p-4 sm:p-7 dark:bg-neutral-800">
-      <div class="mb-8">
-        <h2 class="text-xl font-bold text-gray-800 dark:text-neutral-200">
-          Medical Plus
-        </h2>
-        <p class="text-xs mt-3 text-gray-600 dark:text-neutral-400">
-         You can take a <a class="text-blue-500 underline" href="error.html">quick survey</a> to help the developers maintain this website
-        </p>
-      </div>
-  
-      <form class="relative">
-        <!-- Grid -->
-        <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
-         
-       
-  
-          <div class="sm:col-span-3">
-            <label for="af-account-full-name" class="inline-block text-sm text-gray-800 mt-2.5 dark:text-neutral-200">
-              Full name
-            </label>
-            
-<button data-tooltip-target="tooltip-light" data-tooltip-style="light" type="button" class="p-4">
-       <svg class="inline-block size-3 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-  </svg>
-  <p class="sr-only">tooltip</p>
-</button>
+  <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="max-w-2xl text-center mx-auto">
+      <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl dark:text-white">Designed for you to get more <span class="text-blue-600">simple</span></h1>
+      <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">Build your business here. Take it anywhere.</p>
+    </div>
 
-<div id="tooltip-light" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
-    Use Your Real Name This is going On your appointment Slip
-    <div class="tooltip-arrow" data-popper-arrow></div>
+    <div class="mt-10 relative max-w-5xl mx-auto">
+      
+<video class="w-full" autoplay controls>
+  <source src="./img/video-1.mp4" type="video/mp4" >
+  Your browser does not support the video tag.
+</video>
+
+      <div class="absolute bottom-12 -start-20 -z-[1] size-48 bg-gradient-to-b from-orange-500 to-white p-px rounded-lg dark:to-neutral-900">
+        <div class="bg-white size-48 rounded-lg dark:bg-neutral-900"></div>
+      </div>
+
+      <div class="absolute -top-12 -end-20 -z-[1] size-48 bg-gradient-to-t from-blue-600 to-cyan-400 p-px rounded-full">
+        <div class="bg-white size-48 rounded-full dark:bg-neutral-900"></div>
+      </div>
+    </div>
+  </div>
 </div>
-    
-          </div>
-          <!-- End Col -->
-  
-          <div class="sm:col-span-9">
-            <div class="sm:flex">
-              <input id="af-account-full-name" type="text" class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="John">
-              <input type="text" class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Plus">
-            </div>
-          </div>
-          <!-- End Col -->
-  
-          <div class="sm:col-span-3">
-            <label for="af-account-email" class="inline-block text-sm text-gray-800 mt-2.5 dark:text-neutral-200">
-              Email
-            </label>
-
-            <button data-tooltip-target="tooltip-light" data-tooltip-style="light" type="button" class="p-4">
-                <svg class="inline-block size-3 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-             <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-           </svg>
-           <p class="sr-only">tooltip</p>
-         </button>
-         
-         <div id="tooltip-light" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
-             Use Your Real Email This is going On your appointment Slip
-             <div class="tooltip-arrow" data-popper-arrow></div>
-         </div>
-          </div>
-          <!-- End Col -->
-  
-          <div class="sm:col-span-9">
-            <input id="af-account-email" type="email" class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Medicalplus@gmail.com.com">
-          </div>
-
-
-          <!-- End Col -->
-          <div class="sm:col-span-3">
-            <label for="af-account-email" class="inline-block text-sm text-gray-800 mt-2.5 dark:text-neutral-200">
-              Address
-            </label>
-
-            <button data-tooltip-target="tooltip-light" data-tooltip-style="light" type="button" class="p-4">
-                <svg class="inline-block size-3 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-             <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-           </svg>
-           <p class="sr-only">tooltip</p>
-         </button>
-         
-         <div id="tooltip-light" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
-            This is used to locate you in case of emergencies..
-             <div class="tooltip-arrow" data-popper-arrow></div>
-         </div>
-          </div>
-          <!-- End Col -->
-  
-          <div class="sm:col-span-9">
-            <input id="af-account-email" type="email" class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Your Address and State">
-          </div>
-          <!-- End Col -->
-  
-
-          <div class="sm:col-span-3">
-            <div class="inline-block">
-              <label for="af-account-phone" class="inline-block text-sm text-gray-800 mt-2.5 dark:text-neutral-200">
-                Phone
-              </label>
-            </div>
-          </div>
-          <!-- End Col -->
-  
-          <div class="sm:col-span-9">
-            <div class="sm:flex">
-              <input id="af-account-phone" type="text" class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="+x(xxx)xxx-xx-xx">
-              <select title="Mobile Selector" class="py-2 px-3 pe-9 block w-full sm:w-auto border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
-                <option selected>Whatsapp</option>
-                <option>Telegram</option>
-                <option>Mobile</option>
-                <option>Fax</option>
-                
-              </select>
-            </div>
-  
-            <p class="mt-3">
-              <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500" href="../docs/index.html">
-                <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
-                Add phone
-              </a>
-            </p>
-          </div>
-          <!-- End Col -->
-  
-          <div class="sm:col-span-3">
-            <label for="af-account-gender-checkbox" class="inline-block text-sm text-gray-800 mt-2.5 dark:text-neutral-200">
-              Gender
-            </label>
-          </div>
-          <!-- End Col -->
-  
-          <div class="sm:col-span-9">
-            <div class="sm:flex">
-              <label for="af-account-gender-checkbox" class="flex py-2 px-3 w-full border border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
-                <input type="radio" name="af-account-gender-checkbox" class="shrink-0 mt-0.5 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="af-account-gender-checkbox" checked>
-                <span class="text-sm text-gray-500 ms-3 dark:text-neutral-400">Male</span>
-              </label>
-  
-              <label for="af-account-gender-checkbox-female" class="flex py-2 px-3 w-full border border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
-                <input type="radio" name="af-account-gender-checkbox" class="shrink-0 mt-0.5 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="af-account-gender-checkbox-female">
-                <span class="text-sm text-gray-500 ms-3 dark:text-neutral-400">Female</span>
-              </label>
-  
-           
-          </div>
-          <!-- End Col -->
-  
-          <div class="sm:col-span-3 ">
-            <label for="af-account-bio" class="inline-block text-sm text-gray-800 mt-2.5 dark:text-neutral-200">
-              Add text
-            </label>
-          </div>
-          <!-- End Col -->
-  
-          <div class="sm:col-span-9">
-            <textarea id="af-account-bio" class="py-2 px-3 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" rows="6" placeholder="Can you decribe the problem you have?, Or why your are looking to book an appointment so our nurses can know how to get back to you..."></textarea>
-          </div>
-          <!-- End Col -->
-        </div>
-        <!-- End Grid -->
-        <p class="text-xs mt-3 py-6 text-gray-600 dark:text-neutral-400">
-            You can take a <a class="text-blue-500 underline" href="error.html">quick survey</a> to help the developers maintain this website
-           </p>
-         
-        <div class="mt-5 flex absolute bottom-0 py-16 right-0 gap-x-2">
-          <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-gray-800 dark:hover:bg-neutral-800">
-          <a href="./payment.html">Make payments</a>
-          </button>
-          <button type="button"class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold  rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-       <a href="./error.html">   Pay on Arrival- </a>
-          </button>
-        </div>
-      </form>
-    </div>
-    <!-- End Card -->
-  </div>
-  <!-- End Card Section -->
-        </div>
-
-
-  
-    
-  
-        <div class="absolute bottom-12 -start-20 -z-[1] size-48 bg-gradient-to-b from-orange-500 to-white p-px rounded-lg dark:to-neutral-900">
-          <div class=" bg-white size-48 rounded-lg dark:bg-neutral-900 p-4">
-            <img src="./img/Medical-plus-logo.png" alt="">
-          </div>
-        </div>
-  
-        <div class="absolute -top-12 -end-20 -z-[1] size-48 bg-gradient-to-t from-blue-600 to-cyan-400 p-px rounded-full">
-          <div class="bg-white size-48 rounded-full dark:bg-neutral-900 p-4">
-            <img src="./img/Medical-plus-logo.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Hero -->
-
-  <a href="#" class=" w-auto px-8 py-10 flex items-center justify-center  h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-    Previous Page
-  </a>
+<!-- End Hero -->
 
   <!-- Start Footer -->
 <!-- ========== FOOTER ========== -->
@@ -383,10 +212,55 @@
                 reset: true,  // Reset the animation state when the element is out of view
               });
               </script>
+               <script type="module">
+                let userCreds = JSON.parse(localStorage.getItem("user-creds"));
+                let userInfo = JSON.parse(localStorage.getItem("user-info"));
+          
+          
+                let nameSec = document.getElementById("name-rep");
+                let emailSec = document.getElementById("email-rep");
+                let signout = document.getElementById("signOut");
+          
+           
+          
+                let signOut = () => {
+                  Swal.fire({
+            title: "Are you sure?",
+            text: "Are you sure you want to sign out ?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, Sign out!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              
+              localStorage.removeItem("user-creds");
+                  localStorage.removeItem("user-info");
+                  window.location.href = 'login.html'
+            }
+          });
+          
+                }
+          
+                let checkCred = () => {
+                  if(!localStorage.getItem("user-creds"))
+                  window.location.href = 'blank.html'
+          
+                else{
+               nameSec.innerText = userInfo.fullname;
+                emailSec.innerText = userCreds.email;
+                }
+          
+                }
+          
+                window.addEventListener('load', checkCred);
+                signout.addEventListener('click', signOut)
+              </script>
+          
              <script src="./node_modules/preline/dist/preline.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   
 </body>
 </html>
-7

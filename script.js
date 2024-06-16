@@ -43,11 +43,29 @@ themeToggleBtn.addEventListener('click', function() {
 
 
 
-
 let close = document.getElementById("hidecookie");
 let cookie = document.getElementById("cookies-simple-with-icon-and-dismiss-button");
 
 close = document.addEventListener('click', () => {
 cookie.classList.add('hidden')
 console.log("this closes well")
+});
+
+
+
+const fixedNav = document.getElementById("navigation");
+
+document.addEventListener('scroll', () => {
+    if(window.scrollY > 56){
+    fixedNav.classList.add("fixed"),
+    fixedNav.classList.add("bg-white/75"),
+    fixedNav.classList.add("md:bg-black/5");
+    fixedNav.classList.add("dark:bg-gray-300");
+}
+else{
+    fixedNav.classList.remove("fixed"),
+    fixedNav.classList.remove("bg-white/75"),
+    fixedNav.classList.remove("md:bg-black/5");
+    fixedNav.classList.remove("dark:bg-gray-700");
+}
 });

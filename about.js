@@ -52,3 +52,6 @@ document.addEventListener('scroll',() => {
     }
 })
 
+let myErr = () => {
+window.location.href = 'error.html'
+}

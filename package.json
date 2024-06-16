@@ -13,6 +13,7 @@
   "dependencies": {
     "@preline/strong-password": "^2.1.0",
     "preline": "^2.1.0",
+    "sweetalert2": "^11.6.13",
     "tailwindcss": "^3.4.3",
     "taos": "^1.0.5"
   },

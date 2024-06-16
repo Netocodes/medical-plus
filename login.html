@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body class="bg-gray-200 h-full dark:bg-gray-800 font-inter">
 
@@ -85,7 +86,19 @@
                       </div>
                       <a href="#" id="forgotpass" class="text-sm text-blue-500 hover:underline ml-auto">Lost Password?</a>
                   </div>
-                  <button type="submit" class="text-white bg-blue-400 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center">  Login to your account</button>
+                  <button type="submit" id="done" class="text-white bg-blue-400 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center">  Login to your account</button>
+                  <div id="loader" class=" hidden">
+                    <svg class="w-10 h-10 text-gray-300 animate-spin" viewBox="0 0 64 64" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path
+                      d="M32 3C35.8083 3 39.5794 3.75011 43.0978 5.20749C46.6163 6.66488 49.8132 8.80101 52.5061 11.4939C55.199 14.1868 57.3351 17.3837 58.7925 20.9022C60.2499 24.4206 61 28.1917 61 32C61 35.8083 60.2499 39.5794 58.7925 43.0978C57.3351 46.6163 55.199 49.8132 52.5061 52.5061C49.8132 55.199 46.6163 57.3351 43.0978 58.7925C39.5794 60.2499 35.8083 61 32 61C28.1917 61 24.4206 60.2499 20.9022 58.7925C17.3837 57.3351 14.1868 55.199 11.4939 52.5061C8.801 49.8132 6.66487 46.6163 5.20749 43.0978C3.7501 39.5794 3 35.8083 3 32C3 28.1917 3.75011 24.4206 5.2075 20.9022C6.66489 17.3837 8.80101 14.1868 11.4939 11.4939C14.1868 8.80099 17.3838 6.66487 20.9022 5.20749C24.4206 3.7501 28.1917 3 32 3L32 3Z"
+                      stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M32 3C36.5778 3 41.0906 4.08374 45.1692 6.16256C49.2477 8.24138 52.7762 11.2562 55.466 14.9605C58.1558 18.6647 59.9304 22.9531 60.6448 27.4748C61.3591 31.9965 60.9928 36.6232 59.5759 40.9762"
+                      stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
+                    </path>
+                  </svg>
+                  </div>
                   <div class="text-sm font-medium text-gray-500">
                       Not registered? <a href="Register.html" class="text-blue-500 hover:underline">Create account</a>
                   </div>
@@ -95,9 +108,11 @@
   </div>
     <!-- Login/Sign in form -->
     <!-- ///////////////////////////////////////////// -->
+  
 
     </script>
     <!-- compiled js -->
+    
     <script src="./node_modules/preline/dist/preline.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
@@ -135,6 +150,11 @@
         signInWithEmailAndPassword(auth, emailField.value, pWord.value)
         .then(async(credentials) => {
           console.log(credentials)
+          Swal.fire({
+  title: "Login Successfull",
+  icon: "success"
+  
+});
           var ref = doc(db, "userAuthList", credentials.user.uid);
           const docSnap = await getDoc(ref);
           if(docSnap.exists()){
@@ -143,23 +163,38 @@
               email: docSnap.data().email,
             }))
             localStorage.setItem("user-creds", JSON.stringify(credentials.user));
-            window.location.href = 'index.html'
-
+ 
+           
+window.location.href = 'index.html'
           }
+          
         })
         .catch((error) =>{
           console.log(error.code)          
           console.log(error.message)          
-          alert(error.message)
+          Swal.fire({
+  title: "Something is Wrong Somewhere",
+  text: "Please check your Email and Password input and try again",
+  icon: "error"
+});
         })
       }
       let forgotPassword = () =>{
         sendPasswordResetEmail(auth, emailField.value)
         .then(()=>{
-          alert('a password reset link has been sent to your Registerd email')
+          // alert('a password reset link has been sent to your Registerd email')
+          Swal.fire({
+  title: "Reset Link Sent!",
+  text: "A password reset link has been sent to the Registered Email.",
+  icon: "success"
+});
         })
         .catch((error) =>{
-          
+          Swal.fire({
+  title: "Network Error",
+  text: "Refresh the page and try again in the next 5 minutes",
+  icon: "question"
+});
           console.log(error.code)          
           console.log(error.message)          
 
@@ -167,6 +202,21 @@
       }
       registerForm.addEventListener('submit', signInUser);
       resetPass.addEventListener('click', forgotPassword);
+
+const button = document.getElementById("done");
+const loader = document.getElementById("loader");
+
+button.addEventListener('click', () => {
+   button.classList.add("hidden");
+   loader.classList.remove("hidden")
+});
+
+loader.addEventListener('click', () => {
+   button.classList.remove("hidden");
+   loader.classList.add("hidden")
+});
+
+
     </script>
   </body>
 </html>
