@@ -62,9 +62,7 @@
                   <div class="relative">
                   <label for="password" class=" text-sm font-medium text-gray-900 block mb-2">Your password</label>
                   <input type="password" name="password" id="hs-toggle-password"  placeholder="••••••••" class=" bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" required>
-             <button type="button" data-hs-toggle-password='{
-    "target": "#hs-toggle-password"
-  }' class="absolute ml-0 top-7 end-0 p-3.5 rounded-e-md">
+             <button type="button" id="toggler" class="absolute ml-0 top-7 end-0 p-3.5 rounded-e-md">
   <svg class="flex-shrink-0 size-3.5 text-gray-400 dark:text-neutral-600" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path class="hs-password-active:hidden" d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
     <path class="hs-password-active:hidden" d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
@@ -216,6 +214,15 @@ loader.addEventListener('click', () => {
    loader.classList.add("hidden")
 });
 
+const toggle = document.getElementById("toggler");
+toggle.addEventListener('click', () => {
+  var x = document.getElementById("hs-toggle-password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+});
 
     </script>
   </body>
