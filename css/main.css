@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -3438,11 +3438,6 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
     background-color: rgb(23 23 23 / var(--tw-bg-opacity));
   }
 
-  .dark\:bg-slate-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-  }
-
   .dark\:bg-white\/10 {
     background-color: rgb(255 255 255 / 0.1);
   }
@@ -3593,11 +3588,6 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
     background-color: rgb(38 38 38 / var(--tw-bg-opacity));
   }
 
-  .dark\:hover\:bg-slate-800:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-  }
-
   .dark\:hover\:bg-white\/20:hover {
     background-color: rgb(255 255 255 / 0.2);
   }
@@ -3642,9 +3632,9 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
-  .dark\:focus\:bg-slate-800:focus {
+  .dark\:focus\:bg-neutral-800:focus {
     --tw-bg-opacity: 1;
-    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+    background-color: rgb(38 38 38 / var(--tw-bg-opacity));
   }
 
   .dark\:focus\:ring-gray-600:focus {
