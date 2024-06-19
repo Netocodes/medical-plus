@@ -635,43 +635,79 @@
   <!-- Start Footer -->
   
 
-      <!-- compiled js -->
-      <script src="about.js"></script>
-     
-           <script type="module">
-            let userCreds = JSON.parse(localStorage.getItem("user-creds"));
-            let userInfo = JSON.parse(localStorage.getItem("user-info"));
-      
-      
-            let nameSec = document.getElementById("name-rep");
-            let emailSec = document.getElementById("email-rep");
-            let signout = document.getElementById("signOut");
-      
+           <!-- compiled js -->
+           <script src="script.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+           <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+           <script>
+            // Initialize TAOS with reset option
+            taos.init({
+              once: false,  // Ensure animations trigger every time the element is in view
+              reset: true,  // Reset the animation state when the element is out of view
+            });
+            let navbar = document.getElementById("Navbar");
+let navChild = document.getElementById("navChild")
+ 
+window.addEventListener('scroll', () => {
+    if(window.scrollY < 56){
+        navbar.classList.add('fixed')
        
-      
-            let signOut = () => {
-              localStorage.removeItem("user-creds");
-              localStorage.removeItem("user-info");
-              window.location.href = 'login.html'
-            }
-      
-            let checkCred = () => {
-              if(!localStorage.getItem("user-creds"))
-              window.location.href = 'blank.html'
-      
-            else{
-           nameSec.innerText = userInfo.fullname;
-            emailSec.innerText = userCreds.email;
-            }
-      
-            }
-      
-            window.addEventListener('load', checkCred);
-            signout.addEventListener('click', signOut)
-          </script>
-        <script src="./node_modules/preline/dist/preline.js"></script>
-      <script src="./public/script/preline/dist/preline.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+       
+    }
+    else{
+        navbar.classList.remove('fixed')
+   
+    }
+})
+
+            </script>
+           
+           <script src="./public/script/preline/dist/preline.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script type="module">
+      let userCreds = JSON.parse(localStorage.getItem("user-creds"));
+      let userInfo = JSON.parse(localStorage.getItem("user-info"));
+
+
+      let nameSec = document.getElementById("name-rep");
+      let emailSec = document.getElementById("email-rep");
+      let signout = document.getElementById("signOut");
+
+ 
+
+      let signOut = () => {
+        Swal.fire({
+  title: "Are you sure?",
+  text: "Are you sure you want to sign out ?",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, Sign out!"
+}).then((result) => {
+  if (result.isConfirmed) {
+    
+    localStorage.removeItem("user-creds");
+        localStorage.removeItem("user-info");
+        window.location.href = 'login.html'
+  }
+});
+
+      }
+
+      let checkCred = () => {
+        if(!localStorage.getItem("user-creds"))
+        window.location.href = 'blank.html'
+
+      else{
+     nameSec.innerText = userInfo.fullname;
+      emailSec.innerText = userCreds.email;
+      }
+
+      }
+
+      window.addEventListener('load', checkCred);
+      signout.addEventListener('click', signOut)
+    </script>
 </body>
 </html>
