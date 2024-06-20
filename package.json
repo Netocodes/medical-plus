@@ -4,10 +4,22 @@
   "description": "aWebsite to solve all your Medical needs",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env  tailwindcss -i ./input.css -o ./css/main.css",
+    "build": "npx tailwindcss -i ./input.css -o ./css/main.css",
     "watch": "tailwindcss -i ./input.css -o ./css/main.css --watch",
-     "postinstall": "node setPermissions.js"
+        "deploy": "vercel --prod"
   },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
